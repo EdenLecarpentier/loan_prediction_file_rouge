@@ -3,7 +3,8 @@ from PIL import Image
 import pickle
 
 
-model = pickle.load(open('C:/Users/edenl/Desktop/file_rouge/notebook/model_pkl.pickle', 'rb'))
+model = pickle.load(open('notebook/model_pkl.pickle', 'rb'))
+
 
 
 
