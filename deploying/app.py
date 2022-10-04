@@ -3,14 +3,16 @@ from PIL import Image
 import pickle
 
 
-model = pickle.load(open('C:/Users/edenl/Desktop/file_rouge/model_pkl.', 'rb'))
+model = pickle.load(open('C:/Users/edenl/Desktop/file_rouge/notebook/model_pkl.pickle', 'rb'))
+
+
 
 
 def run():
-    img1 = Image.open('bank.png')
-    img1 = img1.resize((156,145))
-    st.image(img1,use_column_width=False)
-    st.title("Bank Loan Prediction using Machine Learning")
+    #img1 = Image.open('bank.png')
+    #img1 = img1.resize((156,145))
+    #st.image(img1,use_column_width=False)
+    #st.title("Bank Loan Prediction using Machine Learning")
 
     ## Account No
     account_no = st.text_input('Account number')
