@@ -2,9 +2,7 @@ import streamlit as st
 #from PIL import Image
 import pickle
 
-
-model = pickle.load(open('notebook/model_pkl.pickle', 'rb'))
-
+model = pickle.load(open('pickle_model/model_pkl.pickle', 'rb'))
 
 
 def run():
