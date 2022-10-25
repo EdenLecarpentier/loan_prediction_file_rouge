@@ -97,3 +97,19 @@ def run():
             )
 
 run()
+
+#cycler==0.10
+#protobuf>=3.20.1
+#kiwisolver>=1.0.1
+#cachetools==5.2.0
+#GitPython==3.1.29
+#jsonschema==4.16.0
+#Jinja2==3.1.2
+#toolz==0.12.0
+#gitdb==4.0.9
+#urllib3==1.26.12
+#decorator>=3.4.0
+#MarkupSafe==2.1.1
+#pyrsistent==0.18.1
+#MarkupSafe==2.1.1
+#click==8.0.0
