@@ -20,11 +20,6 @@ def run():
     gen_options = list(range(len(gen_display)))
     gen = st.selectbox("Gender",gen_options, format_func=lambda x: gen_display[x])
 
-    ## For Marital Status
-    mar_display = ('Non','Oui')
-    mar_options = list(range(len(mar_display)))
-    mar = st.selectbox("Etat civil", mar_options, format_func=lambda x: mar_display[x])
-
     ## No of dependets
     dep_display = ('Non','Un','Deux','Plus de deux')
     dep_options = list(range(len(dep_display)))
@@ -48,7 +43,7 @@ def run():
     ## For Credit Score
     cred_display = ('0','1')
     cred_options = list(range(len(cred_display)))
-    cred = st.selectbox("Credit history",cred_options, format_func=lambda x: cred_display[x])
+    cred = st.selectbox("Historique de prêt",cred_options, format_func=lambda x: cred_display[x])
 
     ## Applicant Monthly Income
     mon_income = st.number_input("Salaire mensuelle du demandeur",value=0)
