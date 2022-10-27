@@ -18,7 +18,7 @@ def run():
     ## For gender
     gen_display = ('Femme','Homme')
     gen_options = list(range(len(gen_display)))
-    gen = st.selectbox("Gender",gen_options, format_func=lambda x: gen_display[x])
+    gen = st.selectbox("Genre",gen_options, format_func=lambda x: gen_display[x])
 
     ## No of dependets
     dep_display = ('Non','Un','Deux','Plus de deux')
@@ -49,7 +49,7 @@ def run():
     mon_income = st.number_input("Salaire mensuelle du demandeur",value=0)
 
     ## Co-Applicant Monthly Income
-    co_mon_income = st.number_input("Salaire mensuelle du codemandeur)",value=0)
+    co_mon_income = st.number_input("Salaire mensuelle du codemandeur",value=0)
 
     ## Loan AMount
     loan_amt = st.number_input("Prix du prêt",value=0)
@@ -71,7 +71,7 @@ def run():
             duration = 360
         if dur == 4:
             duration = 480
-        features = [[gen, mar, dep, edu, emp, mon_income, co_mon_income, loan_amt, duration, cred, prop]]
+        features = [[gen, dep, edu, emp, mon_income, co_mon_income, loan_amt, duration, cred, prop]]
         print(features)
         prediction = model.predict(features)
         lc = [str(i) for i in prediction]
