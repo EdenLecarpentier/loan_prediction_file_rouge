@@ -12,24 +12,21 @@ from transformers import Trainer , TrainingArguments
 #load trainer and train it
 # or use pytorch pipeline 
 
-model_name = "distilbert-base-uncased"
+model_name = "palakagl/bert_TextClassification"
 
 def read_imdb_split(split_dir):
     split_dir = Path(split_dir)
     texts = []
     labels = []
-    for label_dir in ["pos" , "neg"]:
-
+    for label_dir in ["Positive" , "Negative" , "Neutral" , "Mixed"]:
         for text_file in (split_dir/label_dir).iterdir():
             texts.append(text_file.read_text())
-            labels.append(0 if label_dir == "neg" else 1)
             
     return texts , labels
 
-train_text , train_label = read_imdb_split("aclImdb")
+train_text , train_label = read_imdb_split("projet_sentimen_analysis_e2/aclImdb/train")
 
-
-test_text , test_label = read_imdb_split("aclImdb")
+test_text , test_label = read_imdb_split("projet_sentimen_analysis_e2/aclImdb/test")
 
 
 train_texts , val_texts , train_labels , val_labels = train_test_split(train_text , train_label , test_size=2)
