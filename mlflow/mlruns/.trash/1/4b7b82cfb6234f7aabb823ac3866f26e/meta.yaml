@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/edenl/Desktop/file_rouge/mlruns/1/4b7b82cfb6234f7aabb823ac3866f26e/artifacts
+end_time: 1668433448777
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 4b7b82cfb6234f7aabb823ac3866f26e
+run_name: ambitious-shark-443
+run_uuid: 4b7b82cfb6234f7aabb823ac3866f26e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1668433439581
+status: 3
+tags: []
+user_id: edenl

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/edenl/Desktop/file_rouge/mlruns/1/c998feb6bb4a4e4c826be660da0b2a68/artifacts
+end_time: 1668433597595
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: c998feb6bb4a4e4c826be660da0b2a68
+run_name: run_loan_pred
+run_uuid: c998feb6bb4a4e4c826be660da0b2a68
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1668433597517
+status: 3
+tags: []
+user_id: edenl

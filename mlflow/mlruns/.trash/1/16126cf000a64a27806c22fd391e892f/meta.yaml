@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/edenl/Desktop/file_rouge/mlruns/1/16126cf000a64a27806c22fd391e892f/artifacts
+end_time: 1668433361624
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 16126cf000a64a27806c22fd391e892f
+run_name: languid-shad-524
+run_uuid: 16126cf000a64a27806c22fd391e892f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1668433347388
+status: 3
+tags: []
+user_id: edenl
