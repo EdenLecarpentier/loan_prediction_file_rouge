@@ -1,0 +1,6 @@
+artifact_location: file:///C:/Users/edenl/Desktop/file_rouge/mlruns/1
+creation_time: 1669298007876
+experiment_id: '1'
+last_update_time: 1669298007876
+lifecycle_stage: active
+name: mlflow_loan_pred

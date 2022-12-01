@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/edenl/Desktop/file_rouge/mlruns/1/3d78bf846b2c49cb80ba3038b7a997e5/artifacts
+end_time: 1669388914545
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 3d78bf846b2c49cb80ba3038b7a997e5
+run_name: mlflow_loan_prediction
+run_uuid: 3d78bf846b2c49cb80ba3038b7a997e5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1669388903865
+status: 3
+tags: []
+user_id: edenl
