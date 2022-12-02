@@ -1,0 +1,5 @@
+
+bf69f50fa6ad56 username
+5f7b7264 password
+eu-cdbr-west-03.cleardb.net hostname
+heroku_d7c80f3b4d061a2 schema
