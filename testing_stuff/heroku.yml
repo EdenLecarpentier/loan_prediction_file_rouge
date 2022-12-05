@@ -1,9 +1,0 @@
-build:
-  docker:
-    web: Dockerfile
-staging:
-  script: 
-  - git remote add heroku https://github.com/EdenLecarpentier/loan_prediction_file_rouge.git
-  git push -f heroku main
-run:
-  web: npm run start
