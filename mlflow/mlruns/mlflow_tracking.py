@@ -15,7 +15,7 @@ import scikitplot as skplt
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import cross_validate , learning_curve
-from sklearn.metrics import confusion_matrix , roc_curve
+from sklearn.metrics import confusion_matrix , roc_curve , recall_score
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report
   
@@ -41,7 +41,7 @@ import mlflow.sklearn
 # %%
 if __name__ == "__main__":
     
-    #mlflow.set_tracking_uri("http://localhost:5000")
+    mlflow.set_tracking_uri("http://127.0.0.1:5000")
     mlflow.set_experiment(experiment_name='mlflow_loan_pred')
     with mlflow.start_run(run_name='mlflow_loan_prediction') as run : 
         
@@ -126,11 +126,16 @@ if __name__ == "__main__":
 
 
         # %%
+        
+
 
 
         # %%
         y_pred_log = pipeline_log.predict(X_test)
         y_pred_log
+        
+        recall = recall_score(y_test, y_pred_log)
+         
 
         # %%
         print(classification_report(y_test, y_pred_log))
@@ -159,6 +164,7 @@ if __name__ == "__main__":
         pred = pipeline_log.predict(X_test)
         mlflow.log_metric("accuracy train" , pipeline_log.score(X_train , y_train))
         mlflow.log_metric("accuracy test" , pipeline_log.score(X_test , y_test))
+        mlflow.log_metric("Recall" , recall)
         
         mlflow.sklearn.log_model(pipeline_log , "model")
         
