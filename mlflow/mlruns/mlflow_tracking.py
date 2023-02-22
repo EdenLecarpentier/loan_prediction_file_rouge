@@ -165,6 +165,7 @@ if __name__ == "__main__":
         mlflow.log_metric("accuracy train" , pipeline_log.score(X_train , y_train))
         mlflow.log_metric("accuracy test" , pipeline_log.score(X_test , y_test))
         mlflow.log_metric("Recall" , recall)
+      
         
         mlflow.sklearn.log_model(pipeline_log , "model")
         

@@ -70,10 +70,16 @@ def predicting():
     prediction = load_clf.predict(df)
     prediction_proba = load_clf.predict_proba(df)
 
-
+    #
     st.subheader('Prediction')
     st.write(prediction)
+    t = st.button('Prediction')
+    st.write(t)
+    if t : 
+        st.write(prediction_proba)
+    
+    
 
-    st.subheader('Prediction Probability')
-    st.write(prediction_proba)
+    #st.subheader('Prediction Probability')
+    #st.write(prediction_proba)
 predicting()

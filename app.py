@@ -1,11 +1,62 @@
 import streamlit as st
 #from PIL import Image
 import pickle
+import streamlit_authenticator as stauth
+import yaml
+from pathlib import Path
 
-model = pickle.load(open('pickle_model/model_pkl.pickle', 'rb'))
+#model = pickle.load(open('pickle_model/model_pkl.pickle', 'rb'))
+with open('config.yaml') as file:
+    config = yaml.load(file, Loader=yaml.SafeLoader)
+
+valid_login = config['credentials']['username']
+valid_pwd = config['credentials']['password']
+
+def check_password():
+    """Returns `True` if the user had the correct password."""
+
+    def password_entered():
+        """Checks whether a password entered by the user is correct."""
+        if st.session_state["password"] == valid_pwd and st.session_state["login"] == valid_login:
+            st.session_state["password_correct"] = True 
+            del st.session_state["password"]  # don't store password
+            del st.session_state["login"]
+        else:
+            st.session_state["password_correct"] = False
+
+    if "password_correct" not in st.session_state:
+        # First run, show input for password.
+        st.text_input(
+            "Login", on_change=password_entered, key="login"
+        )
+        st.text_input(
+            "Password", type="password", on_change=password_entered, key="password"
+        )
+        return False
+    elif not st.session_state["password_correct"]:
+        # Password not correct, show input + error.
+        st.text_input(
+            "Login", on_change=password_entered, key="login"
+        )
+        st.text_input(
+            "Password", type="password", on_change=password_entered, key="password"
+        )
+        st.error("😕 Username/password is incorrect")
+        return False
+    else:
+        # Password correct.
+        return True
+
+st.session_state["datai"] = {}
 
 
-def run():
+
+
+if check_password():
+    
+    model = pickle.load(open('pickle_model/model_pkl.pickle', 'rb'))
+
+
     
     st.title("Prédiction de prêt bancaire")
 
@@ -93,6 +144,4 @@ def run():
                 "Numéro de compte "+account_no +' || '
                 'Félécitations! Vous pouvez prétendre à un prêt bancaire !'
             )
-
-run()
 
